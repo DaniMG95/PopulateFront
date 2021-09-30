@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+  <p>What's your rating?</p>
+  <ng-rating-bar
+    [(value)]="data.rating"
+    [ratingCount]="5"
+    [styles]=" {fontSize: '36px'}">
+  </ng-rating-bar>
+  <hr/>
+  <mat-form-field appearance="fill">
+    <mat-label>Review</mat-label>
+    <input matInput [(ngModel)]="data.review">
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
